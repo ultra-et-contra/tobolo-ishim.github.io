@@ -1,1 +1,0 @@
-# tobolo-ishim.github.io
