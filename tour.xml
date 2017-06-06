@@ -1,0 +1,133 @@
+﻿<krpano version="1.18" title="Virtual Tour" onstart="startup();">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- set skin settings: bingmaps? gyro? thumbnails? tooltips? -->
+	<skin_settings maps="true"
+	               maps_type="bing"
+	               maps_bing_api_key="ApP8ApUukiDh1l0GuncRCWt02FPTt7DuMylnxFQGm1hyPc8DJeboVUMTdV5AQCJi"
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="BLEND(0.5)"
+	               controlbar_offset="20"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+
+
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+
+
+<scene name="scene_omsk_baza_10" title="Покровская крепость (с запада)" onstart="" thumburl="panos/omsk_baza_10.tiles/thumb.jpg" lat="54.9341447" lng="72.2086716" heading="">
+
+		<view hlookat="240" vlookat="45" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/omsk_baza_10.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/omsk_baza_10.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/omsk_baza_10.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="121.958" atv="-5.719" linkedscene="scene_omsk_baza_1" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-118.968" atv="-9.145" linkedscene="scene_omsk_baza_7" />
+
+	</scene>
+
+
+
+
+	
+	<scene name="scene_omsk_baza_1" title="Николаевская крепость (с востока)" onstart="" thumburl="panos/omsk_baza_1.tiles/thumb.jpg" lat="55.0209865" lng="71.621418" heading="">
+
+		<view hlookat="210" vlookat="40" fovtype="MFOV" fov="100" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/omsk_baza_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/omsk_baza_1.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/omsk_baza_1.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="158.866" atv="-8.942" linkedscene="scene_omsk_baza_4" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="14.946" atv="-7.147" linkedscene="scene_omsk_baza_10" />
+
+	</scene>
+
+	
+
+	
+	<scene name="scene_omsk_baza_4" title="Николаевская крепость (с запада)" onstart="" thumburl="panos/omsk_baza_4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="270" vlookat="45" fovtype="MFOV" fov="110" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/omsk_baza_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/omsk_baza_4.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/omsk_baza_4.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-26.142" atv="-7.098" linkedscene="scene_omsk_baza_1" />
+
+	</scene>
+
+	
+
+	
+
+	<scene name="scene_omsk_baza_7" title="Покровская крепость (с востока)" onstart="" thumburl="panos/omsk_baza_7.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="100" vlookat="45" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/omsk_baza_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/omsk_baza_7.tiles/pano_%s.jpg" />
+			<mobile>
+				<cube url="panos/omsk_baza_7.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="86.635" atv="-9.156" linkedscene="scene_omsk_baza_10" />
+
+	</scene>
+
+	
+
+	
+	
+
+	
+
+
+</krpano>
